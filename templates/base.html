@@ -1,0 +1,119 @@
+<!doctype html>
+
+{% load static %}
+
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <link rel="stylesheet" href="/static/css/main.css">
+
+    <title>ACM SIGGRAPH at SJSU</title>
+
+    {% block header %}
+    <div class='container-fluid'>
+      <div class="row mb-3">
+          <img src="{% static "images/hometitle.png" %}"  alt="..." height=100% width=100%>
+      </div>
+    </div>
+    {% endblock %}
+
+  </head>
+
+
+
+
+  <body>
+
+    <div class="nav justify-content-center mb-3">
+      {% block navbar %}
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="{% url 'home-page' %}" role="tab" aria-controls="home" aria-selected="true">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="events-tab" data-toggle="tab" href="{% url 'events-page' %}" role="tab" aria-controls="events" aria-selected="false">Events</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="about-tab" data-toggle="tab" href="{% url 'about-page' %}" role="tab" aria-controls="about" aria-selected="false">About</a>
+      </li>
+      </ul>
+      {% endblock %}
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab"></div>
+        <div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="events-tab"></div>
+        <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab"></div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container pb-4">
+    {% block body %}
+
+    {% endblock %}
+    </div>
+
+  </body>
+
+
+
+
+
+  <footer>
+
+    {% block footer %}
+  <div class="container-fluid text-center text-md-left page-footer pt-3 pb-3">
+
+    <div class="row">
+
+      <div class="col-md-3 mt-md-0 mt-3"></div>
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <ul class="list-unstyled text-center">
+          <li>
+            <a href="https://www.siggraph.org/">ACM SIGGRAPH
+          </li>
+          <li>
+            <img src="{% static "images/acmlogo.jpg" %}" width=100px height=100px></a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <h5 class="text-uppercase text-center">stay updated</h5>
+
+        <ul class="list-unstyled text-center">
+          <li>
+            <a href="https://www.facebook.com/groups/acmsiggraphsjsu/?multi_permalinks=2604233296274004&notif_id=1566101191280422&notif_t=group_activity"><i class="fab fa-facebook fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="https://sjsu-cg.slack.com/signup"><i class="fab fa-slack fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="http://bit.ly/siggraphsignup">Membership & Newsletter</a>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="col-md-3 mt-md-0 mt-3">
+      </div>
+
+    </div>
+
+  </div>
+    {% endblock %}
+
+  </footer>
+
+</html>

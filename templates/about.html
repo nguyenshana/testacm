@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block header %}
+<div class='container-fluid'>
+  <div class="row mb-3">
+      <img src="{% static "images/tabtitle.png" %}"  alt="..." height=100% width=100%>
+  </div>
+</div>
+{% endblock %}
+
+{% block navbar %}
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link" id="home-tab" data-toggle="tab" href="{% url 'home-page' %}" role="tab" aria-controls="home" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="events-tab" data-toggle="tab" href="{% url 'events-page' %}" role="tab" aria-controls="events" aria-selected="false">Events</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="about-tab" data-toggle="tab" href="{% url 'about-page' %}" role="tab" aria-controls="about" aria-selected="false">About</a>
+  </li>
+  </ul>
+{% endblock %}
+
+
+{% block body %}
+<div class="col-lg-8 mx-auto mb-5">
+  <div class="col-12 mx-auto pb-4 pt-4">
+    <h1 class="text-center">ABOUT US</h1>
+  </div>
+  <p class="text-center">
+    ACM SIGGRAPH Student Chapter at SJSU is a student organization at San José State
+    University, in San Jose, CA. Formed out of a need to represent students with an
+    interest in computer graphics, the club aims to be an asset to student life by
+    connecting the SJSU community to the CG industry.
+  </p>
+  <p class="text-center">The ACM SIGGRAPH Student Chapter at SJSU focuses on three goals:</p>
+    <ol class="col-md-8 col-lg-8 mx-auto">
+      <li>Expanding awareness & presence of computer graphics technology on campus.</li>
+      <li>Uniting and sparking collaboration between the design, digital art, engineering, and science departments.</li>
+      <li>Connecting students to the companies, software, events, and technology of the computer graphics industry.</li>
+    </ol>
+</div>
+
+<div class="container">
+  <h3 class="text-center">Officers 2019-2020</h3>
+  <div class="row mt-4">
+  <div class="col-2"></div>
+    <div class="col-5">
+      <h5>Lauren Chun</h5>
+      <p>President</p>
+      <h5>Pranika Bedi</h5>
+      <p>Vice President</p>
+      <h5>Vina Kong</h5>
+      <p>Treasurer</p>
+      <h5>Jessica Thang</h5>
+      <p>Secretary/Social Media Coordinator</p>
+      <h5>Vinita Kulkarni</h5>
+      <p>Marketing/Public Relations</p>
+      <h5>Shana Nguyen</h5>
+      <p>Webmaster</p>
+      <h5>Jedd Panopio</h5>
+      <p>Webmaster</p>
+      <h5>Kevin Smith</h5>
+      <p>Club Advisor</p>
+    </div>
+  </div>
+</div>
+<!-- <div class="container">
+  <h2 class="text-center">Officers 2019-2020</h2>
+  <div class="row mt-4">
+    <div class="col-10 ml-auto">
+      <div class="container">
+        <div class="row">
+          <div class="container col-6">
+            <img src="{% static "images/usericon.jpg" %}" id="user-icon">
+          </div>
+          <div class="container col-6" id="officertxt">
+            <h5>Lauren Chun</h5>
+            <p>President</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="container col-6">
+            <img src="{% static "images/usericon.jpg" %}" id="user-icon">
+          </div>
+          <div class="container col-6" id="officertxt">
+            <h5>Pranika Bedi</h5>
+            <p>Vice President</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="container col-6">
+            <img src="{% static "images/usericon.jpg" %}" id="user-icon">
+          </div>
+          <div class="container col-6" id="officertxt">
+            <h5>Vina Kong</h5>
+            <p>Treasurer</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="container col-6">
+            <img src="{% static "images/usericon.jpg" %}" id="user-icon">
+          </div>
+          <div class="container col-6" id="officertxt">
+            <h5>Jessica Thang</h5>
+            <p>Secretary/Social Media Coordinator</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="container col-6">
+            <img src="{% static "images/usericon.jpg" %}" id="user-icon">
+          </div>
+          <div class="container col-6" id="officertxt">
+            <h5>Vinita Kulkarni</h5>
+            <p>Marketing/Public Relations</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="container col-6">
+            <img src="{% static "images/usericon.jpg" %}" id="user-icon">
+          </div>
+          <div class="container col-6" id="officertxt">
+            <h5>Shana Nguyen</h5>
+            <p>Webmaster</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="container col-6">
+            <img src="{% static "images/usericon.jpg" %}" id="user-icon">
+          </div>
+          <div class="container col-6" id="officertxt">
+            <h5>Jedd Panopio</h5>
+            <p>Webmaster</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="container col-6">
+            <img src="{% static "images/usericon.jpg" %}" id="user-icon">
+          </div>
+          <div class="container col-6" id="officertxt">
+            <h5>Kevin Smith</h5>
+            <p>Club Advisor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+{% endblock %}
